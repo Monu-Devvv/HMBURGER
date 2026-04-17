@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/* ✅ Enable dark mode via class strategy (Tailwind v4) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* =============================================
+   GLASSMORPHISM CSS VARIABLES
+   ============================================= */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 165, 0, 0.25);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --glass-blur: blur(16px);
+
+  /* CHANGED: warm light gradient so cards/text are always visible */
+  --bg-gradient: linear-gradient(135deg,  #fff7ed 0%, #fef3c7 50%, #ffe4e6 100%);
+}
+
+.dark {
+  --glass-bg: rgba(15, 15, 25, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --bg-gradient: linear-gradient(135deg, #0f0f1a 0%, #1a0a00 50%, #0f0015 100%);
+}
+
+/* ✅ Page background */
+body {
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  /* CHANGED: dark text in light mode so everything is readable */
+  color: #1f2937;
+  transition: background 0.4s ease;
+}
+
+.dark body {
+  color: #f3f4f6;
+}
+
+/* =============================================
+   GLASS UTILITY CLASSES
+   ============================================= */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+/* CHANGED: light mode glass-card is more opaque so text inside is readable */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* ✅ Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ✅ Smooth theme transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
