@@ -5,7 +5,7 @@
 
 A modern, fully responsive food delivery web application built with React 18 + Tailwind CSS v4 featuring glassmorphism UI, WhatsApp order integration, and dark/light theme support.
 
-[🔴 Live Demo](https://hmburger.netlify.app) &nbsp;&nbsp;|&nbsp;&nbsp; 
+[🔴 Live Demo](https://hmburger-byy-harsh-and-monu.netlify.app/wishlist) &nbsp;&nbsp;|&nbsp;&nbsp; 
 
 
 ---
