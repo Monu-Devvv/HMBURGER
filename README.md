@@ -121,9 +121,6 @@ bun run build
 
 ### Preview Production Build
 
-```bash
-bun run preview
-```
 
 ---
 
