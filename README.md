@@ -11,7 +11,7 @@ A modern, fully responsive food delivery web application built with React 18 + T
 ---
 
 
-## ✨ Features
+## ✨ Features⭐️
 
 - 🎠 **Animated Banner Slider** — Auto-slide every 3.5s with touch swipe support for mobile
 - 🔍 **Live Search** — Real-time food filtering as you type (no API calls)
